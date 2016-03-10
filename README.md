@@ -16,4 +16,8 @@ mv modules.conf.sample modules.conf
 sed -i -e 's#/usr/include/lame#/usr/local/include/lame#g' src/mod/formats/mod_shout/Makefile
 gmake
 gmake install cd-sounds-install cd-moh-install
+cd ~
+wget https://raw.githubusercontent.com/ASWATFZLLC/banshee/master/freeswitch.rc.d
+mv freeswitch.rc.d /usr/local/etc/rc.d/freeswitch
+chmod +x /usr/local/etc/rc.d/freeswitch
 ```
